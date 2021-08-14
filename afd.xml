@@ -1,0 +1,23 @@
+<DFA>
+    <symbols>
+        <element value= "a"/>
+        <element value= "b"/>
+        <element value= "\t"/>
+    </symbols>
+    <states>
+        <element value= "q0"/>
+        <element value= "q1"/>
+        <element value= "q2"/>
+        <element value= "qf"/>
+    </states>
+    <endStates>
+        <element value="qf"/>
+    </endStates>
+    <programFunction>
+        <element start="q0"  finish="q1" symbol="a"/>
+        <element start="q1"  finish="q2" symbol="b"/>
+        <element start="q2"  finish="q2" symbol="a"/>
+        <element start="q2"  finish="qf" symbol="\t"/>
+    </programFunction>
+    <startState value= "q0"/>
+</DFA>

@@ -1,0 +1,21 @@
+<NFA>
+   <symbols>
+       <element value= "a"/>
+       <element value= "b"/>
+   </symbols>
+   <states>
+       <element value= "q1"/>
+       <element value= "q2"/>
+       <element value= "q3"/>
+   </states>
+   <endStates>
+       <element value="q1"/>
+   </endStates>
+   <programFunction>
+       <element start="q1"  finish="q2" symbol="a"/>
+       <element start="q2"  finish="q1" symbol="b"/>
+       <element start="q2"  finish="q3" symbol="b"/>
+       <element start="q3"  finish="q1" symbol="a"/>
+   </programFunction>
+   <startState value= "q1"/>
+</NFA>
