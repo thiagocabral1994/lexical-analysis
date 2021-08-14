@@ -1,5 +1,7 @@
 package br.ufjf.model;
 
+import javax.swing.*;
+
 public class Symbol extends Base<Symbol> {
     final static public Symbol EMPTY = new Symbol(' ');
 
@@ -12,7 +14,13 @@ public class Symbol extends Base<Symbol> {
     }
     public Symbol (String symbol) {
         if (!symbol.isEmpty()) {
-            this.symbol = symbol.toCharArray()[0];
+            if (symbol.charAt(0) == '\\') {
+                String newCharString = "\\"+symbol.substring(1);
+                char newChar = newCharString.charAt(0);
+                this.symbol = symbol.replace('\\',newChar).charAt(0);
+            } else {
+                this.symbol = symbol.charAt(0);
+            }
         }
     }
 
