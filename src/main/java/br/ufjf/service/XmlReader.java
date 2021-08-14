@@ -18,7 +18,7 @@ public abstract class XmlReader {
         var element = document.getDocumentElement();
         var symbolsNode = element.getElementsByTagName("symbols");
         var statesNode = element.getElementsByTagName("states");
-        var endStatesNode = element.getElementsByTagName("endStates");
+        var endStatesNode = element.getElementsByTagName("endStatesStar");
         var programFunctionNode = element.getElementsByTagName("programFunction");
         var startStateNode = element.getElementsByTagName("startState");
 
@@ -48,7 +48,7 @@ public abstract class XmlReader {
         var element = document.getDocumentElement();
         var symbolsNode = element.getElementsByTagName("symbols");
         var statesNode = element.getElementsByTagName("states");
-        var endStatesNode = element.getElementsByTagName("endStates");
+        var endStatesNode = element.getElementsByTagName("endStatesStar");
         var programFunctionNode = element.getElementsByTagName("programFunction");
         var startStateNode = element.getElementsByTagName("startState");
 

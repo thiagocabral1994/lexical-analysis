@@ -14,11 +14,13 @@ public class Symbol extends Base<Symbol> {
     }
     public Symbol (String symbol) {
         if (!symbol.isEmpty()) {
-            if (symbol.charAt(0) == '\\') {
-                String newCharString = "\\"+symbol.substring(1);
-                char newChar = newCharString.charAt(0);
-                this.symbol = symbol.replace('\\',newChar).charAt(0);
-            } else {
+            if (symbol.compareTo("\\n") == 0) {
+                var newChar = symbol.replace("\\n","\n");
+                this.symbol = newChar.charAt(0);
+            } else if (symbol.compareTo("\\t") == 0){
+                var newChar = symbol.replace("\\t","\t");
+                this.symbol = newChar.charAt(0);
+            }else {
                 this.symbol = symbol.charAt(0);
             }
         }
