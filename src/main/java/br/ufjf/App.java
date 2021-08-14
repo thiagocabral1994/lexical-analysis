@@ -9,6 +9,9 @@ import java.io.FileReader;
 public class App {
 
     public static void main( String[] args ) throws Exception {
+        if(args.length < 2) {
+            throw new Exception("xml and txt file paths are needed");
+        }
         System.out.println(args[0]);
         DFA dfa = XmlReader.xmlToDFA(args[0]);
         LexicalAnalyser la = new LexicalAnalyser(dfa, new FileReader(args[1]));
