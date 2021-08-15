@@ -1,2 +1,10 @@
 .idea
 target
+.settings/org.eclipse.m2e.core.prefs
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.jdt.apt.core.prefs
+.settings/org.eclipse.core.resources.prefs
+.project
+.classpath
+target/lexical-analysis-1.0.jar
+.vscode
